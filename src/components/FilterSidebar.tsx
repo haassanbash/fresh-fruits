@@ -15,7 +15,7 @@ interface FilterSidebarProps {
   onChange: (filters: Filters) => void;
 }
 
-const categoryOptions = ["All", "Berry Blends", "Tropical", "Green Juices", "Citrus"];
+const categoryOptions = ["All", "Berry Blends", "Tropical", "Green Juices", "Citrus", "Limon"];
 const typeOptions = ["All", "Cold-Pressed", "Blended", "Hand-Squeezed"];
 const originOptions = ["All", "Brazil", "Trence", "Germany", "Organic"];
 

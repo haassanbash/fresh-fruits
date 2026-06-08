@@ -19,6 +19,12 @@ export const allProducts: Product[] = [
   { id: 6, name: "Peach Nectar", price: 7.99, unit: "bottle", image: "/images/peach-juice.jpg", rating: 5, category: "Stone Fruit", type: "Cold-Pressed", origin: "Organic" },
   { id: 7, name: "Tropical Paradise", price: 9.99, unit: "bottle", image: "/images/tropical-juice.jpg", rating: 5, category: "Tropical", type: "Blended", origin: "Trence" },
   { id: 8, name: "Pineapple Crush", price: 5.49, unit: "bottle", image: "/images/pineapple-juice.jpg", rating: 5, category: "Tropical", type: "Cold-Pressed", origin: "Brazil" },
+  { id: 9, name: "Classic Lemonade", price: 4.49, unit: "bottle", image: "/images/classic-lemonade.jpg", rating: 5, category: "Limon", type: "Hand-Squeezed", origin: "Brazil" },
+  { id: 10, name: "Lemon Mint Cooler", price: 5.99, unit: "bottle", image: "/images/lemon-mint.jpg", rating: 5, category: "Limon", type: "Blended", origin: "Germany" },
+  { id: 11, name: "Lemon Ginger Zing", price: 6.49, unit: "bottle", image: "/images/lemon-ginger.jpg", rating: 5, category: "Limon", type: "Cold-Pressed", origin: "Trence" },
+  { id: 12, name: "Pink Lemonade", price: 5.49, unit: "bottle", image: "/images/pink-lemonade.jpg", rating: 5, category: "Limon", type: "Hand-Squeezed", origin: "Brazil" },
+  { id: 13, name: "Sparkling Lemon", price: 5.99, unit: "bottle", image: "/images/sparkling-lemon.jpg", rating: 5, category: "Limon", type: "Cold-Pressed", origin: "Germany" },
+  { id: 14, name: "Lemon Honey Refresher", price: 6.99, unit: "bottle", image: "/images/lemon-honey.jpg", rating: 5, category: "Limon", type: "Blended", origin: "Organic" },
 ];
 
 export const seasonalProducts: Product[] = [
