@@ -25,6 +25,8 @@ export const allProducts: Product[] = [
   { id: 12, name: "Pink Lemonade", price: 5.49, unit: "bottle", image: "/images/pink-lemonade.jpg", rating: 5, category: "Limon", type: "Hand-Squeezed", origin: "Brazil" },
   { id: 13, name: "Sparkling Lemon", price: 5.99, unit: "bottle", image: "/images/sparkling-lemon.jpg", rating: 5, category: "Limon", type: "Cold-Pressed", origin: "Germany" },
   { id: 14, name: "Lemon Honey Refresher", price: 6.99, unit: "bottle", image: "/images/lemon-honey.jpg", rating: 5, category: "Limon", type: "Blended", origin: "Organic" },
+  { id: 15, name: "Hassan's Special Drink", price: 7.99, unit: "bottle", image: "/images/hassan-special.jpg", rating: 5, category: "Special Drinks", type: "Cold-Pressed", origin: "Organic" },
+
 ];
 
 export const seasonalProducts: Product[] = [

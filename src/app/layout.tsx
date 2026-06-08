@@ -5,6 +5,9 @@ import Providers from "@/components/Providers";
 export const metadata: Metadata = {
   title: "Juicy Fresh - Fresh Juices Pressed & Delivered Daily",
   description: "Discover the season's best cold-pressed and blended juices, straight to your doorstep.",
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({

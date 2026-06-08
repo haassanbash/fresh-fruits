@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <!-- Orange circle (orange fruit) -->
+  <circle cx="50" cy="64" r="40" fill="#FF8C00"/>
+  <circle cx="50" cy="64" r="34" fill="#FFA726"/>
+  <!-- Orange segments -->
+  <path d="M50 30 L50 98" stroke="#FF8C00" stroke-width="2" opacity="0.5"/>
+  <path d="M16 64 L84 64" stroke="#FF8C00" stroke-width="2" opacity="0.5"/>
+  <path d="M26 40 L74 88" stroke="#FF8C00" stroke-width="2" opacity="0.5"/>
+  <path d="M26 88 L74 40" stroke="#FF8C00" stroke-width="2" opacity="0.5"/>
+  <!-- Leaf -->
+  <ellipse cx="50" cy="22" rx="10" ry="6" fill="#4CAF50" transform="rotate(-30 50 22)"/>
+  <line x1="50" y1="24" x2="50" y2="30" stroke="#388E3C" stroke-width="2"/>
+  <!-- Small strawberries -->
+  <circle cx="92" cy="40" r="14" fill="#E53935"/>
+  <circle cx="92" cy="40" r="11" fill="#EF5350"/>
+  <!-- Strawberry seeds -->
+  <circle cx="89" cy="37" r="1.2" fill="#FFEB3B"/>
+  <circle cx="95" cy="37" r="1.2" fill="#FFEB3B"/>
+  <circle cx="92" cy="43" r="1.2" fill="#FFEB3B"/>
+  <!-- Strawberry leaf -->
+  <path d="M88 28 Q92 24 96 28" fill="#4CAF50"/>
+  <!-- Blueberries cluster -->
+  <circle cx="96" cy="78" r="8" fill="#5C6BC0"/>
+  <circle cx="108" cy="74" r="7" fill="#7986CB"/>
+  <circle cx="102" cy="86" r="7" fill="#3F51B5"/>
+  <!-- Water drop on orange -->
+  <path d="M70 50 Q72 44 74 50 Q72 54 70 50" fill="rgba(255,255,255,0.6)"/>
+</svg>
