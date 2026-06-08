@@ -6,17 +6,17 @@ import Footer from "@/components/Footer";
 import { Box, Typography, Container } from "@mui/material";
 
 const values = [
-  { icon: "🌱", title: "100% Organic", desc: "Every fruit is certified organic, grown without synthetic pesticides or fertilizers." },
-  { icon: "🚚", title: "Farm to Door", desc: "Harvested and delivered within 24 hours to guarantee peak freshness." },
+  { icon: "🍋", title: "100% Natural", desc: "Every juice is made from all-natural, pesticide-free produce with zero artificial additives." },
+  { icon: "🧊", title: "Cold-Pressed", desc: "Our hydraulic presses extract maximum nutrients and flavor — no heat, no compromise." },
   { icon: "🤝", title: "Fair Trade", desc: "We pay our partner farmers fair prices and invest in sustainable agriculture." },
-  { icon: "♻️", title: "Eco Packaging", desc: "All packaging is biodegradable or recyclable — zero waste, zero guilt." },
+  { icon: "♻️", title: "Eco Packaging", desc: "All bottles and packaging are fully recyclable — zero waste, zero guilt." },
 ];
 
 const stats = [
   { number: "500+", label: "Partner Farms" },
   { number: "12K+", label: "Happy Customers" },
-  { number: "98%", label: "Organic Certified" },
-  { number: "24hr", label: "Farm to Door" },
+  { number: "98%", label: "All Natural" },
+  { number: "24hr", label: "Pressed to Door" },
 ];
 
 export default function AboutPage() {
@@ -33,24 +33,24 @@ export default function AboutPage() {
             OUR STORY
           </Typography>
           <Typography variant="body1" sx={{ color: "rgba(255,255,255,0.9)", mt: 1, maxWidth: 500, fontSize: "15px" }}>
-            From a small family farm to your kitchen table — here&apos;s how we got here.
+            From a small juice bar to your kitchen table — here&apos;s how we got here.
           </Typography>
         </Box>
       </Box>
 
       {/* Mission */}
       <Container maxWidth="md" sx={{ py: 8, textAlign: "center" }}>
-        <Typography variant="overline" sx={{ color: "#2e7d32", fontWeight: 700, letterSpacing: "3px", fontSize: "12px" }}>OUR MISSION</Typography>
+        <Typography variant="overline" sx={{ color: "#e65100", fontWeight: 700, letterSpacing: "3px", fontSize: "12px" }}>OUR MISSION</Typography>
         <Typography variant="h5" sx={{ fontWeight: 800, color: "#111", mt: 1, mb: 3, fontSize: { xs: "1.3rem", md: "1.8rem" } }}>
-          Making fresh, organic fruit accessible to everyone.
+          Making fresh, natural juices accessible to everyone.
         </Typography>
         <Typography variant="body1" sx={{ color: "#666", lineHeight: 1.8, maxWidth: 700, mx: "auto", fontSize: "15px" }}>
-          The Daily Harvest started in 2020 with a simple idea: what if getting farm-fresh fruit was as easy as ordering a pizza? We partner directly with over 500 organic farms across 12 countries, cutting out middlemen to bring you the freshest seasonal produce at honest prices. Every box we deliver supports sustainable farming and helps families eat better.
+          Juicy Fresh started in 2020 with a simple idea: what if getting farm-fresh juice was as easy as ordering a pizza? We partner directly with over 500 farms across 12 countries, cutting out middlemen to bring you the freshest cold-pressed juices and smoothies at honest prices. Every bottle we deliver supports sustainable farming and helps families drink better.
         </Typography>
       </Container>
 
       {/* Stats */}
-      <Box sx={{ bgcolor: "#2e7d32", py: 6 }}>
+      <Box sx={{ bgcolor: "#e65100", py: 6 }}>
         <Container maxWidth="lg">
           <Box sx={{ display: "flex", justifyContent: "space-around", flexWrap: "wrap", gap: 4 }}>
             {stats.map((s) => (

@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import Providers from "@/components/Providers";
 
 export const metadata: Metadata = {
-  title: "The Daily Harvest - Fresh Fruits Delivered Daily",
-  description: "Discover the season's best organic and locally sourced fruits, straight to your doorstep.",
+  title: "Juicy Fresh - Fresh Juices Pressed & Delivered Daily",
+  description: "Discover the season's best cold-pressed and blended juices, straight to your doorstep.",
 };
 
 export default function RootLayout({

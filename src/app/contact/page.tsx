@@ -10,9 +10,9 @@ import EmailIcon from "@mui/icons-material/Email";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 
 const contactInfo = [
-  { icon: <LocationOnIcon sx={{ fontSize: 20 }} />, title: "Visit Us", lines: ["123 Harvest Lane", "Portland, OR 97201"] },
+  { icon: <LocationOnIcon sx={{ fontSize: 20 }} />, title: "Visit Us", lines: ["123 Juice Avenue", "Portland, OR 97201"] },
   { icon: <PhoneIcon sx={{ fontSize: 20 }} />, title: "Call Us", lines: ["(503) 555-0142", "Mon–Fri 9AM–6PM PST"] },
-  { icon: <EmailIcon sx={{ fontSize: 20 }} />, title: "Email Us", lines: ["hello@dailyharvest.com", "support@dailyharvest.com"] },
+  { icon: <EmailIcon sx={{ fontSize: 20 }} />, title: "Email Us", lines: ["hello@juicyfresh.com", "support@juicyfresh.com"] },
   { icon: <AccessTimeIcon sx={{ fontSize: 20 }} />, title: "Hours", lines: ["Mon–Fri: 9AM – 6PM", "Sat–Sun: 10AM – 4PM"] },
 ];
 
@@ -48,7 +48,7 @@ export default function ContactPage() {
         <Box sx={{ display: "grid", gridTemplateColumns: { xs: "repeat(2, 1fr)", md: "repeat(4, 1fr)" }, gap: 3, mb: 6 }}>
           {contactInfo.map((info) => (
             <Box key={info.title} sx={{ textAlign: "center", p: 3, border: "1px solid #f0f0f0", borderRadius: 3 }}>
-              <Box sx={{ color: "#2e7d32", mb: 1.5 }}>{info.icon}</Box>
+              <Box sx={{ color: "#e65100", mb: 1.5 }}>{info.icon}</Box>
               <Typography variant="subtitle2" sx={{ fontWeight: 700, color: "#333", mb: 1 }}>{info.title}</Typography>
               {info.lines.map((line) => (
                 <Typography key={line} variant="body2" sx={{ color: "#777", fontSize: "13px", lineHeight: 1.6 }}>{line}</Typography>
@@ -86,7 +86,7 @@ export default function ContactPage() {
               variant="contained"
               fullWidth
               sx={{
-                bgcolor: "#2e7d32", "&:hover": { bgcolor: "#1b5e20" },
+                bgcolor: "#e65100", "&:hover": { bgcolor: "#bf360c" },
                 borderRadius: 2, py: 1.5, fontWeight: 700, fontSize: "14px",
                 letterSpacing: "0.5px", textTransform: "none",
               }}
@@ -104,7 +104,7 @@ export default function ContactPage() {
         autoHideDuration={4000}
         onClose={() => setSubmitted(false)}
         message="Message sent successfully! We'll get back to you soon."
-        sx={{ "& .MuiSnackbarContent-root": { bgcolor: "#2e7d32" } }}
+        sx={{ "& .MuiSnackbarContent-root": { bgcolor: "#e65100" } }}
       />
     </div>
   );

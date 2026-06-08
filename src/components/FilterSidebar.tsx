@@ -15,8 +15,8 @@ interface FilterSidebarProps {
   onChange: (filters: Filters) => void;
 }
 
-const categoryOptions = ["All", "Berries", "Tropical", "Stone Fruits", "Citrus"];
-const typeOptions = ["All", "Natural", "Organic"];
+const categoryOptions = ["All", "Berry Blends", "Tropical", "Green Juices", "Citrus"];
+const typeOptions = ["All", "Cold-Pressed", "Blended", "Hand-Squeezed"];
 const originOptions = ["All", "Brazil", "Trence", "Germany", "Organic"];
 
 export default function FilterSidebar({ filters, onChange }: FilterSidebarProps) {
@@ -34,7 +34,7 @@ export default function FilterSidebar({ filters, onChange }: FilterSidebarProps)
             <FormControlLabel
               key={opt}
               value={opt}
-              control={<Radio size="small" sx={{ color: "#ccc", "&.Mui-checked": { color: "#2e7d32" }, p: 0.8 }} />}
+              control={<Radio size="small" sx={{ color: "#ccc", "&.Mui-checked": { color: "#e65100" }, p: 0.8 }} />}
               label={<Typography variant="body2" sx={{ color: "#555", fontSize: "13px" }}>{opt}</Typography>}
               sx={{ mb: 0.3, ml: 0 }}
             />
@@ -52,7 +52,7 @@ export default function FilterSidebar({ filters, onChange }: FilterSidebarProps)
             <FormControlLabel
               key={opt}
               value={opt}
-              control={<Radio size="small" sx={{ color: "#ccc", "&.Mui-checked": { color: "#2e7d32" }, p: 0.8 }} />}
+              control={<Radio size="small" sx={{ color: "#ccc", "&.Mui-checked": { color: "#e65100" }, p: 0.8 }} />}
               label={<Typography variant="body2" sx={{ color: "#555", fontSize: "13px" }}>{opt}</Typography>}
               sx={{ mb: 0.3, ml: 0 }}
             />
@@ -97,12 +97,12 @@ export default function FilterSidebar({ filters, onChange }: FilterSidebarProps)
           step={0.5}
           valueLabelFormat={(v) => `$${v}`}
           sx={{
-            color: "#2e7d32",
+            color: "#e65100",
             "& .MuiSlider-thumb": {
               width: 16,
               height: 16,
-              bgcolor: "#2e7d32",
-              "&:hover": { boxShadow: "0 0 0 8px rgba(46,125,50,0.15)" },
+              bgcolor: "#e65100",
+              "&:hover": { boxShadow: "0 0 0 8px rgba(230,81,0,0.15)" },
             },
             "& .MuiSlider-track": { height: 4 },
             "& .MuiSlider-rail": { height: 4, color: "#e0e0e0" },
@@ -126,13 +126,13 @@ export default function FilterSidebar({ filters, onChange }: FilterSidebarProps)
           </Typography>
           <Box sx={{ display: "flex", flexWrap: "wrap", gap: 0.5 }}>
             {filters.category !== "All" && (
-              <Chip label={filters.category} size="small" onDelete={() => update({ category: "All" })} sx={{ fontSize: "11px", bgcolor: "#e8f5e9", color: "#2e7d32" }} />
+              <Chip label={filters.category} size="small" onDelete={() => update({ category: "All" })} sx={{ fontSize: "11px", bgcolor: "#fff3e0", color: "#e65100" }} />
             )}
             {filters.type !== "All" && (
-              <Chip label={filters.type} size="small" onDelete={() => update({ type: "All" })} sx={{ fontSize: "11px", bgcolor: "#e8f5e9", color: "#2e7d32" }} />
+              <Chip label={filters.type} size="small" onDelete={() => update({ type: "All" })} sx={{ fontSize: "11px", bgcolor: "#fff3e0", color: "#e65100" }} />
             )}
             {filters.origin !== "All" && (
-              <Chip label={filters.origin} size="small" onDelete={() => update({ origin: "All" })} sx={{ fontSize: "11px", bgcolor: "#e8f5e9", color: "#2e7d32" }} />
+              <Chip label={filters.origin} size="small" onDelete={() => update({ origin: "All" })} sx={{ fontSize: "11px", bgcolor: "#fff3e0", color: "#e65100" }} />
             )}
           </Box>
         </Box>

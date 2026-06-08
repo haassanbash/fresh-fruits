@@ -40,10 +40,10 @@ export default function ShopPage() {
       {/* Page Header */}
       <Box sx={{ bgcolor: "#f5f7f5", py: 5, px: 4, textAlign: "center", borderBottom: "1px solid #f0f0f0" }}>
         <Typography variant="h4" sx={{ fontWeight: 900, color: "#111", letterSpacing: "2px", fontSize: { xs: "1.5rem", md: "2rem" } }}>
-          SHOP ALL FRUITS
+          SHOP ALL JUICES
         </Typography>
         <Typography variant="body2" sx={{ color: "#888", mt: 1, fontSize: "14px" }}>
-          Browse our complete selection of fresh, organic fruits
+          Browse our complete selection of fresh, cold-pressed juices
         </Typography>
 
         {/* Search Bar */}
@@ -55,7 +55,7 @@ export default function ShopPage() {
         >
           <SearchIcon sx={{ color: "#999", fontSize: 20 }} />
           <InputBase
-            placeholder="Search fruits..."
+            placeholder="Search juices..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             sx={{ flex: 1, fontSize: "14px" }}
@@ -78,7 +78,7 @@ export default function ShopPage() {
           )}
           {searchQuery && (
             <Chip label={`Search: "${searchQuery}"`} size="small" onDelete={() => setSearchQuery("")}
-              sx={{ fontSize: "11px", bgcolor: "#e8f5e9", color: "#2e7d32" }} />
+              sx={{ fontSize: "11px", bgcolor: "#fff3e0", color: "#e65100" }} />
           )}
         </Box>
 
@@ -93,7 +93,7 @@ export default function ShopPage() {
           <Box sx={{ flex: 1 }}>
             {filteredProducts.length === 0 ? (
               <Box sx={{ textAlign: "center", py: 8 }}>
-                <Typography variant="h6" sx={{ color: "#999", fontWeight: 600, mb: 1 }}>No fruits found</Typography>
+                <Typography variant="h6" sx={{ color: "#999", fontWeight: 600, mb: 1 }}>No juices found</Typography>
                 <Typography variant="body2" sx={{ color: "#bbb" }}>Try adjusting your search or filters</Typography>
               </Box>
             ) : (

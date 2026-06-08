@@ -35,7 +35,7 @@ export default function CartDrawer() {
               </Typography>
               <Button
                 onClick={() => setIsCartOpen(false)}
-                sx={{ mt: 2, color: "#2e7d32", fontWeight: 700, textTransform: "none" }}
+                sx={{ mt: 2, color: "#e65100", fontWeight: 700, textTransform: "none" }}
               >
                 Continue Shopping
               </Button>
@@ -53,7 +53,7 @@ export default function CartDrawer() {
                   <Typography variant="subtitle2" sx={{ fontWeight: 600, fontSize: "13px", color: "#333" }}>
                     {item.name} ({item.unit})
                   </Typography>
-                  <Typography variant="body2" sx={{ fontWeight: 700, color: "#2e7d32", mt: 0.3 }}>
+                  <Typography variant="body2" sx={{ fontWeight: 700, color: "#e65100", mt: 0.3 }}>
                     ${item.price.toFixed(2)}
                   </Typography>
                   <Box sx={{ display: "flex", alignItems: "center", gap: 1, mt: 1 }}>
@@ -93,14 +93,14 @@ export default function CartDrawer() {
           <Box sx={{ px: 3, py: 3, borderTop: "1px solid #f0f0f0" }}>
             <Box sx={{ display: "flex", justifyContent: "space-between", mb: 2 }}>
               <Typography variant="subtitle1" sx={{ fontWeight: 700 }}>Total</Typography>
-              <Typography variant="subtitle1" sx={{ fontWeight: 800, color: "#2e7d32" }}>
+              <Typography variant="subtitle1" sx={{ fontWeight: 800, color: "#e65100" }}>
                 ${totalPrice.toFixed(2)}
               </Typography>
             </Box>
             <Button
               fullWidth
               variant="contained"
-              sx={{ bgcolor: "#2e7d32", "&:hover": { bgcolor: "#1b5e20" }, borderRadius: 2, py: 1.5, fontWeight: 700, textTransform: "none", fontSize: "14px" }}
+              sx={{ bgcolor: "#e65100", "&:hover": { bgcolor: "#bf360c" }, borderRadius: 2, py: 1.5, fontWeight: 700, textTransform: "none", fontSize: "14px" }}
             >
               Checkout
             </Button>

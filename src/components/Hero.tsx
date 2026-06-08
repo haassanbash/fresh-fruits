@@ -17,7 +17,7 @@ export default function Hero() {
       <Box
         component="img"
         src="/images/hero.jpg"
-        alt="Fresh fruits showcase"
+        alt="Fresh juices showcase"
         sx={{
           width: "100%",
           height: "100%",
@@ -58,7 +58,7 @@ export default function Hero() {
             textShadow: "0 2px 8px rgba(0,0,0,0.3)",
           }}
         >
-          FRESHLY PICKED,
+          FRESHLY PRESSED,
           <br />
           DELIVERED DAILY.
         </Typography>
@@ -73,15 +73,15 @@ export default function Hero() {
             textShadow: "0 1px 4px rgba(0,0,0,0.2)",
           }}
         >
-          Discover the season&apos;s best organic and locally sourced fruits, straight to your doorstep.
+          Discover the season&apos;s best cold-pressed and blended juices, straight to your doorstep.
         </Typography>
 
         <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
           <Button
             variant="contained"
             sx={{
-              bgcolor: "#2e7d32",
-              "&:hover": { bgcolor: "#1b5e20" },
+              bgcolor: "#e65100",
+              "&:hover": { bgcolor: "#bf360c" },
               borderRadius: 8,
               px: 4,
               py: 1.5,

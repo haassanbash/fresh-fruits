@@ -5,20 +5,20 @@ import { Box, Typography, Container } from "@mui/material";
 
 const categories = [
   {
-    name: "BERRIES",
-    image: "/images/strawberries.jpg",
+    name: "BERRY BLENDS",
+    image: "/images/strawberry-juice.jpg",
   },
   {
     name: "TROPICAL",
-    image: "/images/mangoes.jpg",
+    image: "/images/mango-juice.jpg",
   },
   {
-    name: "STONE FRUITS",
-    image: "/images/peaches.jpg",
+    name: "GREEN JUICES",
+    image: "/images/green-juice.jpg",
   },
   {
     name: "CITRUS",
-    image: "/images/oranges.jpg",
+    image: "/images/orange-juice.jpg",
   },
 ];
 

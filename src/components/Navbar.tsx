@@ -56,17 +56,17 @@ export default function Navbar({ onSearch }: NavbarProps) {
       <Toolbar sx={{ justifyContent: "space-between", display: "flex", minHeight: "70px !important" }}>
         {/* Logo */}
         <Box sx={{ display: "flex", alignItems: "center", gap: 1, cursor: "pointer", flexGrow: { xs: 1, md: 0 } }}>
-          <span style={{ fontSize: "28px", lineHeight: 1 }}>🌿</span>
+          <span style={{ fontSize: "28px", lineHeight: 1 }}>🍹</span>
           <Typography
             variant="h6"
             sx={{
               fontWeight: 800,
-              color: "#1b5e20",
+              color: "#e65100",
               letterSpacing: "0.5px",
               fontSize: { xs: "1rem", md: "1.15rem" },
             }}
           >
-            The Daily Harvest
+            Juicy Fresh
           </Typography>
         </Box>
 
@@ -79,12 +79,12 @@ export default function Navbar({ onSearch }: NavbarProps) {
                 href={link.href}
                 key={link.label}
                 style={{
-                  color: isActive ? "#2e7d32" : "#555",
+                  color: isActive ? "#e65100" : "#555",
                   fontWeight: isActive ? 700 : 500,
                   fontSize: "13px",
                   letterSpacing: "1px",
                   textDecoration: "none",
-                  borderBottom: isActive ? "2px solid #2e7d32" : "none",
+                  borderBottom: isActive ? "2px solid #e65100" : "none",
                   paddingBottom: "2px",
                   transition: "color 0.2s",
                 }}
@@ -122,7 +122,7 @@ export default function Navbar({ onSearch }: NavbarProps) {
                 >
                   <InputBase
                     autoFocus
-                    placeholder="Search fruits..."
+                    placeholder="Search juices..."
                     value={searchQuery}
                     onChange={handleSearchChange}
                     sx={{ fontSize: "13px", minWidth: 180, "& input": { py: 0.5 } }}

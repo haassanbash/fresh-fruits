@@ -9,7 +9,7 @@ export default function Footer() {
       {/* Subscribe Banner */}
       <Box
         sx={{
-          bgcolor: "#2e7d32",
+          bgcolor: "#e65100",
           py: 4,
           px: 4,
           textAlign: "center",
@@ -37,7 +37,7 @@ export default function Footer() {
               fontSize: "13px",
             }}
           >
-            Get fresh deals delivered to your inbox weekly
+            Get fresh juice deals delivered to your inbox weekly
           </Typography>
         </Container>
       </Box>
@@ -61,9 +61,9 @@ export default function Footer() {
             }}
           >
             <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
-              <span style={{ fontSize: "20px" }}>🌿</span>
+              <span style={{ fontSize: "20px" }}>🍹</span>
               <Typography variant="subtitle2" sx={{ color: "#fff", fontWeight: 700 }}>
-                The Daily Harvest
+                Juicy Fresh
               </Typography>
             </Box>
             <Box sx={{ display: "flex", gap: 3 }}>
@@ -90,7 +90,7 @@ export default function Footer() {
             variant="caption"
             sx={{ color: "#555", display: "block", mt: 3, textAlign: "center", fontSize: "11px" }}
           >
-            &copy; 2025 The Daily Harvest. All rights reserved.
+            &copy; 2025 Juicy Fresh. All rights reserved.
           </Typography>
         </Container>
       </Box>

@@ -16,7 +16,7 @@ export default function BoxesPage() {
   const [addedId, setAddedId] = useState<number | null>(null);
 
   const handleAdd = (box: typeof fruitBoxes[number]) => {
-    addToCart({ id: box.id, name: box.name, price: box.price, image: box.image, unit: "Box" });
+    addToCart({ id: box.id, name: box.name, price: box.price, image: box.image, unit: "Bundle" });
     setAddedId(box.id);
     setTimeout(() => setAddedId(null), 1200);
   };
@@ -28,10 +28,10 @@ export default function BoxesPage() {
       {/* Page Header */}
       <Box sx={{ bgcolor: "#f5f7f5", py: 6, px: 4, textAlign: "center", borderBottom: "1px solid #f0f0f0" }}>
         <Typography variant="h4" sx={{ fontWeight: 900, color: "#111", letterSpacing: "2px", fontSize: { xs: "1.5rem", md: "2rem" } }}>
-          CURATED FRUIT BOXES
+          CURATED JUICE BUNDLES
         </Typography>
         <Typography variant="body1" sx={{ color: "#888", mt: 1, maxWidth: 500, mx: "auto", fontSize: "15px" }}>
-          Pre-packed boxes of seasonal favorites, delivered weekly. Save more with every box.
+          Pre-packed bundles of seasonal juice favorites, delivered weekly. Save more with every bundle.
         </Typography>
       </Box>
 
@@ -42,14 +42,14 @@ export default function BoxesPage() {
         </Typography>
         <Box sx={{ display: "flex", justifyContent: "center", gap: { xs: 2, md: 6 }, flexWrap: "wrap", mb: 2 }}>
           {[
-            { step: "1", title: "Choose a Box", desc: "Pick the box that suits your taste" },
-            { step: "2", title: "We Pack Fresh", desc: "Handpicked on delivery day" },
+            { step: "1", title: "Choose a Bundle", desc: "Pick the bundle that suits your taste" },
+            { step: "2", title: "We Press Fresh", desc: "Cold-pressed on delivery day" },
             { step: "3", title: "Enjoy Weekly", desc: "Delivered to your doorstep" },
           ].map((item) => (
             <Box key={item.step} sx={{ textAlign: "center", flex: { xs: "1 1 140px", md: "0 0 180px" } }}>
               <Box
                 sx={{
-                  width: 50, height: 50, borderRadius: "50%", bgcolor: "#2e7d32", color: "#fff",
+                  width: 50, height: 50, borderRadius: "50%", bgcolor: "#e65100", color: "#fff",
                   display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 800,
                   fontSize: "20px", mx: "auto", mb: 1.5,
                 }}
@@ -76,7 +76,7 @@ export default function BoxesPage() {
                     size="small"
                     sx={{
                       position: "absolute", top: 12, left: 12,
-                      bgcolor: badgeColors[box.badge] || "#2e7d32",
+                      bgcolor: "#e65100",
                       color: "#fff", fontWeight: 800, fontSize: "10px", letterSpacing: "1px",
                     }}
                   />
@@ -100,7 +100,7 @@ export default function BoxesPage() {
 
                 <Box sx={{ display: "flex", alignItems: "center", justifyContent: "space-between", mt: 2 }}>
                   <Box>
-                    <Typography variant="h6" sx={{ fontWeight: 900, color: "#2e7d32", fontSize: "1.3rem" }}>
+                    <Typography variant="h6" sx={{ fontWeight: 900, color: "#e65100", fontSize: "1.3rem" }}>
                       ${box.price.toFixed(2)}
                     </Typography>
                     <Typography variant="caption" sx={{ color: "#bbb", textDecoration: "line-through" }}>
@@ -111,8 +111,8 @@ export default function BoxesPage() {
                     variant="contained"
                     onClick={() => handleAdd(box)}
                     sx={{
-                      bgcolor: addedId === box.id ? "#43a047" : "#2e7d32",
-                      "&:hover": { bgcolor: "#1b5e20" },
+                      bgcolor: addedId === box.id ? "#e65100" : "#e65100",
+                      "&:hover": { bgcolor: "#bf360c" },
                       borderRadius: 2, fontWeight: 700, fontSize: "12px", letterSpacing: "0.5px",
                       px: 3, py: 1, textTransform: "none", transition: "all 0.3s",
                     }}

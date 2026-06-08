@@ -79,7 +79,7 @@ export default function HomePage() {
               fontSize: { xs: "1.2rem", md: "1.5rem" },
             }}
           >
-            SHOP FRESH FRUITS
+            SHOP FRESH JUICES
           </Typography>
           <Pagination />
         </Box>
@@ -102,7 +102,7 @@ export default function HomePage() {
               label={`Search: "${searchQuery}"`}
               size="small"
               onDelete={() => setSearchQuery("")}
-              sx={{ fontSize: "11px", bgcolor: "#e8f5e9", color: "#2e7d32" }}
+              sx={{ fontSize: "11px", bgcolor: "#fff3e0", color: "#e65100" }}
             />
           )}
         </Box>
@@ -119,7 +119,7 @@ export default function HomePage() {
             {filteredProducts.length === 0 ? (
               <Box sx={{ textAlign: "center", py: 8 }}>
                 <Typography variant="h6" sx={{ color: "#999", fontWeight: 600, mb: 1 }}>
-                  No fruits found
+                  No juices found
                 </Typography>
                 <Typography variant="body2" sx={{ color: "#bbb" }}>
                   Try adjusting your search or filters

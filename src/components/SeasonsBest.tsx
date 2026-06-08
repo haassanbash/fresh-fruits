@@ -37,7 +37,7 @@ export default function SeasonsBest() {
           SEASON&apos;S BEST
         </Typography>
         <Typography variant="body2" align="center" sx={{ color: "#888", mb: 5, fontSize: "14px" }}>
-          Handpicked selections that change with the seasons
+          Handpicked juice selections that change with the seasons
         </Typography>
 
         {/* Season Tabs */}
@@ -123,10 +123,10 @@ export default function SeasonsBest() {
                 {product.name}
               </Typography>
               <Typography variant="body1" sx={{ color: "#666", mb: 2, fontSize: "15px" }}>
-                Freshly harvested {product.name.toLowerCase()} from {product.origin}. Perfect for smoothies, desserts, or eating fresh. Limited seasonal availability.
+                Freshly pressed {product.name.toLowerCase()} crafted in {product.origin}. Perfect for boosting your energy, post-workout recovery, or everyday refreshment. Limited seasonal availability.
               </Typography>
               <Box sx={{ display: "flex", gap: 2, alignItems: "center", mb: 3, justifyContent: { xs: "center", md: "flex-start" } }}>
-                <Typography variant="h5" sx={{ fontWeight: 900, color: "#2e7d32" }}>
+                <Typography variant="h5" sx={{ fontWeight: 900, color: "#e65100" }}>
                   ${product.price.toFixed(2)}
                 </Typography>
                 <Typography variant="body2" sx={{ color: "#bbb", textDecoration: "line-through" }}>

@@ -77,7 +77,7 @@ export default function FruitCard({ id, name, price, unit, image, rating = 5 }: 
 
         <Typography
           variant="h6"
-          sx={{ fontWeight: 800, color: "#2e7d32", fontSize: "1.1rem" }}
+          sx={{ fontWeight: 800, color: "#e65100", fontSize: "1.1rem" }}
         >
           ${price.toFixed(2)}
         </Typography>
@@ -90,8 +90,8 @@ export default function FruitCard({ id, name, price, unit, image, rating = 5 }: 
           fullWidth
           onClick={handleAdd}
           sx={{
-            bgcolor: added ? "#43a047" : "#2e7d32",
-            "&:hover": { bgcolor: "#1b5e20" },
+            bgcolor: added ? "#ef6c00" : "#e65100",
+            "&:hover": { bgcolor: "#bf360c" },
             borderRadius: 2,
             fontWeight: 700,
             fontSize: "11px",
