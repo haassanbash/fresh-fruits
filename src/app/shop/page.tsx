@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import FruitCard from "@/components/FruitCard";
 import FilterSidebar from "@/components/FilterSidebar";
@@ -10,16 +10,37 @@ import Pagination from "@/components/Pagination";
 import { Box, Typography, Container, Chip, InputBase } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import type { Filters } from "@/components/FilterSidebar";
-import { allProducts } from "@/data/products";
+
+interface Product {
+  id: number;
+  name: string;
+  price: number;
+  unit: string;
+  image: string;
+  rating: number;
+  category: string;
+  type: string;
+  origin: string;
+}
 
 const defaultFilters: Filters = { category: "All", type: "All", origin: "All", priceRange: [0, 30] };
 
 export default function ShopPage() {
+  const [products, setProducts] = useState<Product[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [filters, setFilters] = useState<Filters>(defaultFilters);
 
+  useEffect(() => {
+    let cancelled = false;
+    fetch("/api/products")
+      .then((res) => res.json())
+      .then((data) => { if (!cancelled && Array.isArray(data)) setProducts(data); })
+      .catch(() => {});
+    return () => { cancelled = true; };
+  }, []);
+
   const filteredProducts = useMemo(() => {
-    return allProducts.filter((p) => {
+    return products.filter((p) => {
       if (searchQuery && !p.name.toLowerCase().includes(searchQuery.toLowerCase())) return false;
       if (filters.category !== "All" && p.category !== filters.category) return false;
       if (filters.type !== "All" && p.type !== filters.type) return false;
@@ -27,7 +48,7 @@ export default function ShopPage() {
       if (p.price < filters.priceRange[0] || p.price > filters.priceRange[1]) return false;
       return true;
     });
-  }, [searchQuery, filters]);
+  }, [searchQuery, filters, products]);
 
   const hasActiveFilters =
     filters.category !== "All" || filters.type !== "All" || filters.origin !== "All" ||

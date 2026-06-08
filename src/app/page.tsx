@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Categories from "@/components/Categories";
@@ -12,7 +12,18 @@ import Pagination from "@/components/Pagination";
 import SeasonsBest from "@/components/SeasonsBest";
 import { Box, Typography, Container, Chip } from "@mui/material";
 import type { Filters } from "@/components/FilterSidebar";
-import { allProducts } from "@/data/products";
+
+interface Product {
+  id: number;
+  name: string;
+  price: number;
+  unit: string;
+  image: string;
+  rating: number;
+  category: string;
+  type: string;
+  origin: string;
+}
 
 const defaultFilters: Filters = {
   category: "All",
@@ -22,11 +33,21 @@ const defaultFilters: Filters = {
 };
 
 export default function HomePage() {
+  const [products, setProducts] = useState<Product[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [filters, setFilters] = useState<Filters>(defaultFilters);
 
+  useEffect(() => {
+    let cancelled = false;
+    fetch("/api/products")
+      .then((res) => res.json())
+      .then((data) => { if (!cancelled && Array.isArray(data)) setProducts(data); })
+      .catch(() => {});
+    return () => { cancelled = true; };
+  }, []);
+
   const filteredProducts = useMemo(() => {
-    return allProducts.filter((p) => {
+    return products.filter((p) => {
       // Search filter
       if (searchQuery && !p.name.toLowerCase().includes(searchQuery.toLowerCase())) {
         return false;
@@ -49,7 +70,7 @@ export default function HomePage() {
       }
       return true;
     });
-  }, [searchQuery, filters]);
+  }, [searchQuery, filters, products]);
 
   const hasActiveFilters =
     filters.category !== "All" ||

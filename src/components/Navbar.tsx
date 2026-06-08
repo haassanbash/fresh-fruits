@@ -2,14 +2,16 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import {
-  AppBar, Toolbar, Typography, Box, IconButton, Badge, InputBase, ClickAwayListener,
+  AppBar, Toolbar, Typography, Box, IconButton, Badge, InputBase, ClickAwayListener, Button,
 } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import PersonOutlined from "@mui/icons-material/PersonOutlined";
 import ShoppingCartOutlined from "@mui/icons-material/ShoppingCartOutlined";
+import LogoutIcon from "@mui/icons-material/Logout";
 import { useCart } from "@/context/CartContext";
+import { useAuth } from "@/context/AuthContext";
 
 const navLinks = [
   { label: "HOME", href: "/" },
@@ -26,7 +28,9 @@ interface NavbarProps {
 
 export default function Navbar({ onSearch }: NavbarProps) {
   const { totalItems, setIsCartOpen } = useCart();
+  const { isAuthenticated, logout } = useAuth();
   const pathname = usePathname();
+  const router = useRouter();
   const [searchOpen, setSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -39,6 +43,11 @@ export default function Navbar({ onSearch }: NavbarProps) {
     const val = e.target.value;
     setSearchQuery(val);
     onSearch?.(val);
+  };
+
+  const handleLogout = async () => {
+    await logout();
+    router.push("/");
   };
 
   return (
@@ -93,6 +102,38 @@ export default function Navbar({ onSearch }: NavbarProps) {
               </Link>
             );
           })}
+          {isAuthenticated && (
+            <>
+              <Link
+                href="/admin"
+                style={{
+                  color: pathname === "/admin" ? "#e65100" : "#555",
+                  fontWeight: pathname === "/admin" ? 700 : 500,
+                  fontSize: "13px",
+                  letterSpacing: "1px",
+                  textDecoration: "none",
+                  borderBottom: pathname === "/admin" ? "2px solid #e65100" : "none",
+                  paddingBottom: "2px",
+                }}
+              >
+                DASHBOARD
+              </Link>
+              <Link
+                href="/admin/settings"
+                style={{
+                  color: pathname === "/admin/settings" ? "#e65100" : "#555",
+                  fontWeight: pathname === "/admin/settings" ? 700 : 500,
+                  fontSize: "13px",
+                  letterSpacing: "1px",
+                  textDecoration: "none",
+                  borderBottom: pathname === "/admin/settings" ? "2px solid #e65100" : "none",
+                  paddingBottom: "2px",
+                }}
+              >
+                SETTINGS
+              </Link>
+            </>
+          )}
         </Box>
 
         {/* Action Icons */}
@@ -147,6 +188,20 @@ export default function Navbar({ onSearch }: NavbarProps) {
           <IconButton sx={{ color: "#555" }}>
             <PersonOutlined sx={{ fontSize: 22 }} />
           </IconButton>
+          {isAuthenticated ? (
+            <IconButton sx={{ color: "#555" }} onClick={handleLogout} title="Logout">
+              <LogoutIcon sx={{ fontSize: 22 }} />
+            </IconButton>
+          ) : (
+            <Button
+              variant="text"
+              size="small"
+              onClick={() => router.push("/admin/login")}
+              sx={{ color: "#555", fontSize: "12px", letterSpacing: "1px", minWidth: "auto", px: 1 }}
+            >
+              LOGIN
+            </Button>
+          )}
           <IconButton sx={{ color: "#555" }} onClick={() => setIsCartOpen(true)}>
             <Badge
               badgeContent={totalItems}
